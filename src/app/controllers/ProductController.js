@@ -22,12 +22,10 @@ module.exports = {
             }
 
        let results = await Product.create(req.body)
-       const product = results.rows[0].id
-       
-       results = await Category.all()
-       const categories = results.rows
+       const productId = results.rows[0].id
+     
 
-       return res.render("products/create.njk", { productId, categories })
+       return res.redirect(`products/${productId}`)
 
     }
 }

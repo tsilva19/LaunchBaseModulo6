@@ -1,12 +1,12 @@
 CREATE TABLE "products" (
   "id" SERIAL PRIMARY KEY,
-  "category_id" int UNIQUE,
-  "user_id" int UNIQUE,
-  "name" text,
-  "description" text,
-  "old_price" int,
-  "price" int,
-  "status" int,
+  "category_id" int null,
+  "user_id" int null,
+  "name" text null,
+  "description" text null,
+  "old_price" int null ,
+  "price" int null,
+  "status" int null,
   "created_at" timestamp DEFAULT (now()),
   "update_at" timestamp DEFAULT (now())
 );
